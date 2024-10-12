@@ -6,6 +6,7 @@ let waitingForSecondNumber = false;
 
 const display = document.getElementById("display");
 const modeToggleBtn = document.getElementById("modeToggle");
+const operatorButton = document.querySelectorAll(".operator");
 const body = document.body;
 
 // display update
@@ -73,6 +74,7 @@ function handleDecimal() {
 }
 
 function handleOperator(operator) {
+  currentOperator = operator;
   if (!waitingForSecondNumber) {
     if (firstNumber === null) {
       firstNumber = parseFloat(displayValue);
@@ -83,7 +85,6 @@ function handleOperator(operator) {
       firstNumber = result;
     }
     waitingForSecondNumber = true;
-    currentOperator = operator;
   }
   updateDisplay();
 }
