@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000; 
+
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.display {
+  grid-column: span 4;
+  background-color: rgba(110, 108, 108, 0.397);
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  text-align: right;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #444;
+  border: none;
+  padding: 20px;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #575454;
+}
+
+button:active {
+  background-color: #666;
+}
+
+.operator {
+  background-color: #1c9fc7;
+}
+
+.operator:hover {
+  background-color: #4a92af;
+}
+
+.equals {
+  background-color: #28a745;
+}
+
+.equals:hover {
+  background-color: #34d058;
+}
+
+.clear {
+  background-color: #d32f2f;
+}
+
+.clear:hover {
+  background-color: #e74c3c;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.decimal {
+  background-color: #666;
+}
+
+.decimal:hover {
+  background-color: #777;
+}
+
+/* light mode */
+.light-mode {
+  background-color: #f9f9f9;
+}
+
+.light-mode .calculator {
+  background-color: #f1f1f1;
+  border: 1px solid #d1d1d1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .display {
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom: 2px solid #d1d1d1;
+}
+
+.light-mode button {
+  background-color: #e0e0e0;
+  color: #333333;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode button:hover {
+  background-color: #b3b3b3;
+}
+
+.light-mode button:active {
+  background-color: #525151;
+  color: #e0e0e0;
+  transform: scale(0.95);
+}
+
+#modeToggle {
+  position: absolute;
+  top: 20px;
+  left: 350px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#modeToggle:hover {
+  transform: scale(1.2);
+}
